@@ -55,6 +55,6 @@ app.get('/api/:name', (request, response) => { //added param to url
 })
 
 //did 2nd - added a port to listen to server
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => { //tells to use whatever heroku is using as server or ours
     console.log(`The server is now running on port ${PORT}.`)
 })  
