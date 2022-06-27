@@ -52,7 +52,7 @@ app.get('/api/:name', (request, response) => { //added param to url
     if (mainCharacters[charName]) {
         response.json(mainCharacters[charName]);
     } else {
-        console.log(mainCharacters['unknown'])
+        response.json(mainCharacters['unknown'])
         // response.json(mainCharacters['unknown'])
     }
 })
