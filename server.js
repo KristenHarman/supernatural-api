@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const PORT = 8000;
+
+app.use(cors())
 
 //4th - create json object with info
 let mainCharacters = {
@@ -22,7 +25,7 @@ let mainCharacters = {
     },
     'castiel': {
         'name': 'Castiel',
-        'nickname': 'Cas, Clarence, Unicorn (by Meg), Feathers (by Crowley)',
+        'nickname': ['Cas, Clarence, Unicorn (by Meg), Feathers (by Crowley)'],
         'species': 'Angel',
         'gender': 'Male',
         'occupation': '',
